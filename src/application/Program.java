@@ -80,23 +80,26 @@ public class Program {
                 System.out.println();
             }
             
-            if((board[1][1] == 'X')&&(board[1][2] == 'X')&&(board[1][3] == 'X')||
-               (board[2][1] == 'X')&&(board[2][2] == 'X')&&(board[2][3] == 'X')||
-               (board[3][1] == 'X')&&(board[3][2] == 'X')&&(board[3][3] == 'X')||
-               (board[1][1] == 'X')&&(board[2][1] == 'X')&&(board[3][1] == 'X')||
-               (board[1][2] == 'X')&&(board[2][2] == 'X')&&(board[3][2] == 'X')||
-               (board[1][3] == 'X')&&(board[2][3] == 'X')&&(board[3][3] == 'X')) {
+            if((board[0][0] == 'X')&&(board[0][1] == 'X')&&(board[0][2] == 'X')||
+               (board[1][0] == 'X')&&(board[1][1] == 'X')&&(board[1][2] == 'X')||
+               (board[2][0] == 'X')&&(board[2][1] == 'X')&&(board[2][2] == 'X')||
+               (board[0][0] == 'X')&&(board[1][0] == 'X')&&(board[2][0] == 'X')||
+               (board[0][1] == 'X')&&(board[1][1] == 'X')&&(board[2][1] == 'X')||
+               (board[0][2] == 'X')&&(board[1][2] == 'X')&&(board[2][2] == 'X')) {
                 
                 System.out.println("Game 1 is Winner!");
+                win = true;
                 
-            }else if((board[1][1] == 'O')&&(board[1][2] == 'O')&&(board[1][3] == 'O')||
-                    (board[2][1] == 'O')&&(board[2][2] == 'O')&&(board[2][3] == 'O')||
-                    (board[3][1] == 'O')&&(board[3][2] == 'O')&&(board[3][3] == 'O')||
-                    (board[1][1] == 'O')&&(board[2][1] == 'O')&&(board[3][1] == 'O')||
-                    (board[1][2] == 'O')&&(board[2][2] == 'O')&&(board[3][2] == 'O')||
-                    (board[1][3] == 'O')&&(board[2][3] == 'O')&&(board[3][3] == 'O')) {
+            }else if((board[0][0] == 'O')&&(board[0][1] == 'O')&&(board[0][2] == 'O')||
+               (board[1][0] == 'O')&&(board[1][1] == 'O')&&(board[1][2] == 'O')||
+               (board[2][0] == 'O')&&(board[2][1] == 'O')&&(board[2][2] == 'O')||
+               (board[0][0] == 'O')&&(board[1][0] == 'O')&&(board[2][0] == 'O')||
+               (board[0][1] == 'O')&&(board[1][1] == 'O')&&(board[2][1] == 'O')||
+               (board[0][2] == 'O')&&(board[1][2] == 'O')&&(board[2][2] == 'O')) {
+                System.out.println("Game 2 is Winner!");
+                win = true;
 
-            }else {
+            }else if(turn>9){
                 System.out.println("No Winner!");
             }
         }
