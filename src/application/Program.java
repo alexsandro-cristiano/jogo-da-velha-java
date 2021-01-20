@@ -19,7 +19,7 @@ public class Program {
         
         while (!win) {
 
-            if (board.turn % 2 == 1) {
+            if (board.getTurn() % 2 == 1) {
                 System.out.println("Jogador 1. Escolha a linha e coluna (1-3).");
                 sinal = 'X';
             } else {

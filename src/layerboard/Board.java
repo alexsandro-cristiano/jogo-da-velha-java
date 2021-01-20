@@ -2,20 +2,26 @@ package layerboard;
 
 public class Board {
     
-    public char[][] board;
-    public int turn;
+    private char[][] board;
+    private int turn;
     
-    public Board (){
-        
-    }
+    public Board (){ }
     
     public Board(int value){
         this.board = new char [3][3];
-        iniciarBoard();
         this.turn = value;
+        startBoard();
     }
-    
-    private void iniciarBoard(){
+
+    public int getTurn() {
+        return turn;
+    }
+
+    public void setTurn(int turn) {
+        this.turn = turn;
+    }
+        
+    private void startBoard(){
         for(int i=0; i<board.length; i++){
             for(int j=0; j<board.length; j++){
                 board[i][j] = ' ';
@@ -23,7 +29,7 @@ public class Board {
         }
     }
     
-    public boolean verificarEspacoLivre(int linha,int coluna){        
+    private boolean verificarEspacoLivre(int linha,int coluna){        
         return board[linha][coluna]== ' ';
     }
     
